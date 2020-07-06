@@ -14,7 +14,7 @@ export default class HasilSurvei extends Component {
         }
       }
       componentDidMount(){
-        return fetch('http://192.168.1.2:8000/api/hasil?ph='+this.state.ph+'&suhu='+this.state.suhu+'&musim='+this.state.musim,{
+        return fetch('https://spkbuah.patunganbersama.com/api/hasil?ph='+this.state.ph+'&suhu='+this.state.suhu+'&musim='+this.state.musim,{
           method: 'GET',
           headers: {
             Accept: 'application/json',
@@ -76,7 +76,7 @@ export default class HasilSurvei extends Component {
                               paddingVertical: 20,
                               }}>
                                 
-                                <Image source={{uri:'http://192.168.1.2:8000/img/'+item.gambar}} style={{
+                                <Image source={{uri:'https://spkbuah.patunganbersama.com/img/'+item.gambar}} style={{
                                   width: 100, 
                                   height: 100
                                   }}/>

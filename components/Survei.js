@@ -16,7 +16,7 @@ export default class Awalan extends Component{
         }
       }
       componentDidMount(){
-        return fetch('http://192.168.1.2:8000/api/survei?tipe='+this.state.tipe,{
+        return fetch('https://spkbuah.patunganbersama.com/api/survei?tipe='+this.state.tipe,{
           method: 'GET',
           headers: {
             Accept: 'application/json',
@@ -55,7 +55,7 @@ export default class Awalan extends Component{
                 tipe: this.state.tipe+1
             });
             console.log(opsi)
-            return fetch('http://192.168.1.2:8000/api/survei?tipe='+this.state.tipe,{
+            return fetch('https://spkbuah.patunganbersama.com/api/survei?tipe='+this.state.tipe,{
             method: 'GET',
             headers: {
                 Accept: 'application/json',

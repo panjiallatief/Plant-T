@@ -17,7 +17,7 @@ export default class Beranda extends Component {
     }
   }
   componentDidMount(){
-    return fetch('http://192.168.1.2:8000/api/buah',{
+    return fetch('https://spkbuah.patunganbersama.com/api/buah',{
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -61,7 +61,7 @@ export default class Beranda extends Component {
                         alignSelf: 'center',
                       }}>
                       <Image source={require('../src/dasar.png')} style={styles.BG}/>
-                      <Image source={require('../src/Buah/apple.png')} style={styles.buatBuah}/>
+                      <Image source={{uri:'https://spkbuah.patunganbersama.com/img/apple.png'}} style={styles.buatBuah}/>
                     <Text style={styles.TextBuah}>{this.state.apel.nama}</Text>
                       <Text numberOfLines={4} width="100%" style={styles.desText}>{this.state.apel.ket}</Text>
                       </SafeAreaView>
@@ -77,7 +77,7 @@ export default class Beranda extends Component {
                         alignSelf: 'center',
                       }}>
                       <Image source={require('../src/dasar2.png')} style={styles.BG}/>
-                      <Image source={require('../src/Buah/durian.png')} style={styles.buatBuah}/>
+                      <Image source={{uri:'https://spkbuah.patunganbersama.com/img/durian.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.durian.nama}</Text>
                       <Text numberOfLines={4} width="100%" style={styles.desText}>{this.state.durian.ket}</Text>
                       </SafeAreaView>
@@ -93,7 +93,7 @@ export default class Beranda extends Component {
                         alignSelf: 'center',
                       }}>
                       <Image source={require('../src/dasar3.png')} style={styles.BG}/>
-                      <Image source={require('../src/Buah/nanas.png')} style={styles.buatBuah}/>
+                      <Image source={{uri:'https://spkbuah.patunganbersama.com/img/nanas.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.nanas.nama}</Text>
                       <Text numberOfLines={4} width="100%" style={styles.desText}>{this.state.nanas.ket}</Text>
                       </SafeAreaView>
@@ -109,7 +109,7 @@ export default class Beranda extends Component {
                         alignSelf: 'center',
                       }}>
                       <Image source={require('../src/dasar4.png')} style={styles.BG}/>
-                      <Image source={require('../src/Buah/naga.png')} style={styles.buatBuah}/>
+                      <Image source={{uri:'https://spkbuah.patunganbersama.com/img/naga.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.naga.nama}</Text>
                       <Text numberOfLines={4} width="100%" style={styles.desText}>{this.state.naga.ket}</Text>
                       </SafeAreaView>
@@ -125,7 +125,7 @@ export default class Beranda extends Component {
                         alignSelf: 'center',
                       }}>
                       <Image source={require('../src/dasar5.png')} style={styles.BG}/>
-                      <Image source={require('../src/Buah/pepaya.png')} style={styles.buatBuah}/>
+                      <Image source={{uri:'https://spkbuah.patunganbersama.com/img/pepaya.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.pepaya.nama}</Text>
                       <Text numberOfLines={4} width="100%" style={styles.desText}>{this.state.pepaya.ket}</Text>
                       </SafeAreaView>
@@ -141,7 +141,7 @@ export default class Beranda extends Component {
                         alignSelf: 'center',
                       }}>
                       <Image source={require('../src/dasar6.png')} style={styles.BG}/>
-                      <Image source={require('../src/Buah/pisang.png')} style={styles.buatBuah}/>
+                      <Image source={{uri:'https://spkbuah.patunganbersama.com/img/pisang.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.pisang.nama}</Text>
                       <Text numberOfLines={4} width="100%" style={styles.desText}>{this.state.pisang.ket}</Text>
                       </SafeAreaView>

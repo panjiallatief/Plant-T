@@ -16,7 +16,7 @@ export default class Buahk extends Component {
     }
   }
   componentDidMount(){
-    return fetch('http://192.168.1.2:8000/api/buahJenis?id='+this.props.navigation.state.params.id,{
+    return fetch('https://spkbuah.patunganbersama.com/api/buahJenis?id='+this.props.navigation.state.params.id,{
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -89,7 +89,7 @@ export default class Buahk extends Component {
               position: 'relative',
               bottom: 690,
               right: 20,
-            }}><Image source={{uri:'http://192.168.1.2:8000/img/'+this.state.gambar}} style={styles.buatBuah}/></View>
+            }}><Image source={{uri:'https://spkbuah.patunganbersama.com/img/'+this.state.gambar}} style={styles.buatBuah}/></View>
       </View>
     </View>
   );
