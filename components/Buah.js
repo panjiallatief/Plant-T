@@ -41,12 +41,12 @@ export default class Buahk extends Component {
   return (
     <View style={styles.container}>
       <View style={{
-        width: 100,
-        height: 25,
+        width: '30%',
+        height: '5%',
         position: 'relative',
         alignSelf: 'flex-start',
-        bottom: 30,
-        left: 30,
+        bottom: '3%',
+        left: '5%',
       }}><TouchableOpacity 
       onPress={() => this.props.navigation.goBack()}>
       <Text style={{
@@ -64,33 +64,22 @@ export default class Buahk extends Component {
           color: 'white',
         }}>{this.state.nama}</Text>
         <Text style={{
-          fontSize: 22,
+          fontSize: 25,
           fontFamily: 'sans-serif-light',
           fontStyle: 'italic',
           color: 'white',
-        }}>({this.state.latin})</Text>
+        }}>{this.state.latin}</Text>
         </View>
       <View style={styles.isiK}>
-        <SafeAreaView>
-        <View style={{
-          alignItems: 'center',
-          alignSelf: 'center',
-          width: 350,
-          height: 500,
-          position: 'relative',
-          bottom: 15,
-        }}><Text style={{fontSize: 25,}}>{this.state.keterangan}</Text>
-          </View>
-          </SafeAreaView>
-          <View style={{
-              width: 170,
-              height: 170,
-              alignSelf: 'flex-end',
-              position: 'relative',
-              bottom: 690,
-              right: 20,
+        <Text style={{fontSize: 25, paddingHorizontal: '3%', textAlign: 'justify', paddingTop: '10%'}}>{this.state.keterangan}</Text>
+          
+    </View><View style={{
+              width: '30%',
+              height: '30%',
+              top: '20%',
+              right: '10%',
+              position: 'absolute',
             }}><Image source={{uri:'https://spkbuah.patunganbersama.com/img/'+this.state.gambar}} style={styles.buatBuah}/></View>
-      </View>
     </View>
   );
 }
@@ -105,12 +94,9 @@ const styles = StyleSheet.create({
   },
   isiK:{
     backgroundColor: '#E2FFF9',
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-    borderBottomLeftRadius: 40,
-    borderBottomRightRadius: 40,
-    width: 380,
-    height: 550,
+    borderRadius: 30,
+    width: '90%',
+    height: '60%',
     position: 'relative',
     top: 80,
   },

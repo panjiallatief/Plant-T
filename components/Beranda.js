@@ -45,7 +45,6 @@ export default class Beranda extends Component {
       <View style={styles.header}>
         <Text style={styles.text_header}>Tanaman apa yang ingin anda tanam ?</Text>
         </View>
-        <View style={styles.badan}>
             <ScrollView horizontal 
             showsHorizontalScrollIndicator={false}
             >
@@ -55,11 +54,7 @@ export default class Beranda extends Component {
                     <View style={styles.boxContent}>
                     <TouchableOpacity
                       onPress={() => this.props.navigation.navigate('Isi',{id:1})}>
-                        <SafeAreaView style={{                 
-                        width : 250,
-                        height : 400,
-                        alignSelf: 'center',
-                      }}>
+                        <SafeAreaView style={styles.dalem}>
                       <Image source={require('../src/dasar.png')} style={styles.BG}/>
                       <Image source={{uri:'https://spkbuah.patunganbersama.com/img/apple.png'}} style={styles.buatBuah}/>
                     <Text style={styles.TextBuah}>{this.state.apel.nama}</Text>
@@ -71,11 +66,7 @@ export default class Beranda extends Component {
                     <View style={styles.boxContent}>
                     <TouchableOpacity
                       onPress={() => this.props.navigation.navigate('Isi',{id:2})}>
-                        <SafeAreaView style={{                 
-                        width : 250,
-                        height : 400,
-                        alignSelf: 'center',
-                      }}>
+                        <SafeAreaView style={styles.dalem}>
                       <Image source={require('../src/dasar2.png')} style={styles.BG}/>
                       <Image source={{uri:'https://spkbuah.patunganbersama.com/img/durian.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.durian.nama}</Text>
@@ -87,11 +78,7 @@ export default class Beranda extends Component {
                     <View style={styles.boxContent}>
                     <TouchableOpacity
                       onPress={() => this.props.navigation.navigate('Isi',{id:3})}>
-                        <SafeAreaView style={{                 
-                        width : 250,
-                        height : 400,
-                        alignSelf: 'center',
-                      }}>
+                        <SafeAreaView style={styles.dalem}>
                       <Image source={require('../src/dasar3.png')} style={styles.BG}/>
                       <Image source={{uri:'https://spkbuah.patunganbersama.com/img/nanas.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.nanas.nama}</Text>
@@ -103,11 +90,7 @@ export default class Beranda extends Component {
                     <View style={styles.boxContent}>
                     <TouchableOpacity
                       onPress={() => this.props.navigation.navigate('Isi',{id:4})}>
-                        <SafeAreaView style={{                 
-                        width : 250,
-                        height : 400,
-                        alignSelf: 'center',
-                      }}>
+                        <SafeAreaView style={styles.dalem}>
                       <Image source={require('../src/dasar4.png')} style={styles.BG}/>
                       <Image source={{uri:'https://spkbuah.patunganbersama.com/img/naga.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.naga.nama}</Text>
@@ -119,11 +102,7 @@ export default class Beranda extends Component {
                     <View style={styles.boxContent}>
                     <TouchableOpacity
                       onPress={() => this.props.navigation.navigate('Isi',{id:5})}>
-                        <SafeAreaView style={{                 
-                        width : 250,
-                        height : 400,
-                        alignSelf: 'center',
-                      }}>
+                        <SafeAreaView style={styles.dalem}>
                       <Image source={require('../src/dasar5.png')} style={styles.BG}/>
                       <Image source={{uri:'https://spkbuah.patunganbersama.com/img/pepaya.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.pepaya.nama}</Text>
@@ -135,11 +114,7 @@ export default class Beranda extends Component {
                     <View style={styles.boxContent}>
                     <TouchableOpacity
                       onPress={() => this.props.navigation.navigate('Isi',{id:6})}>
-                        <SafeAreaView style={{                 
-                        width : 250,
-                        height : 400,
-                        alignSelf: 'center',
-                      }}>
+                        <SafeAreaView style={styles.dalem}>
                       <Image source={require('../src/dasar6.png')} style={styles.BG}/>
                       <Image source={{uri:'https://spkbuah.patunganbersama.com/img/pisang.png'}} style={styles.buatBuah}/>
                       <Text style={styles.TextBuah}>{this.state.pisang.nama}</Text>
@@ -148,24 +123,12 @@ export default class Beranda extends Component {
                       </TouchableOpacity>
                     </View>
 
-                      <View style={{
-                          width : 270,
-                          height : 400,
-                          borderTopLeftRadius : 20,
-                          borderTopRightRadius : 20,
-                          borderBottomLeftRadius : 20,
-                          borderBottomRightRadius : 20,
-                          backgroundColor : '#E2FFF9',
-                          position: 'relative',
-                          top: 200,
-                          marginEnd: 30,
-                          marginStart: 30,
-                      }}>
+                      <View style={[[styles.boxContent],{backgroundColor: '#E2FFF9'}]}>
                       <TouchableOpacity 
                                     onPress={() => this.props.navigation.navigate('SPK',{id:1})}>
                         <SafeAreaView style={{                 
-                          width : 250,
-                          height : 350,
+                          width : '100%',
+                          height : '100%',
                           alignSelf: 'center',
                         }}>
                         <Text style={{
@@ -174,13 +137,14 @@ export default class Beranda extends Component {
                           color: "#1BBC9B",
                           textAlign: 'justify',
                           position: 'relative',
-                          top: 130,
+                          top: '30%',
+                          left: '5%'
                         }}>Mulai Survei</Text>
                         <Icon type="FontAwesome" name='arrow-right' style={{
                           color: '#1BBC9B',
                           position: 'relative',
                           alignSelf: 'center',
-                          top: 150,
+                          top: '40%',
 
                           }}/>
                         </SafeAreaView>
@@ -189,7 +153,6 @@ export default class Beranda extends Component {
                     </View>
             </ScrollView>
         </View>
-    </View>
   );
 }
 }
@@ -205,11 +168,10 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontWeight: 'bold',
     color: 'white',
-    paddingRight: 100,
     justifyContent:'flex-start',
     position: 'relative',
-    left: 30,
-    top: 150,
+    top : '150%',
+    paddingHorizontal: '5%'
   },
   TextBuah:{
     fontSize: 30,
@@ -229,34 +191,37 @@ const styles = StyleSheet.create({
     alignSelf:'center'
   },
   boxContent:{
-    width : 250,
+    width : '12.6%',
     height : 400,
-    borderTopLeftRadius : 20,
-    borderTopRightRadius : 20,
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
+    borderRadius : 30,
     position: 'relative',
-    top: 200,
+    top : '9%',
     marginLeft: 30,
     backgroundColor: 'white',
+    justifyContent: 'center',
   },
   BG:{
-    width: 250,
-    height: 280,
+    width: '100%',
+    height: '70%',
     position: 'absolute',
     alignSelf: 'center',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
   },
   badan:{
     flex: 1,
   },
   desText:{
     position:'relative',
-    top: 50,
-    paddingLeft: 10,
-    paddingRight: 10,
+    top: '12%',
+    paddingHorizontal: 10,
     textAlign: 'justify',
+  },
+  dalem : {
+    width : 257,
+    borderRadius: 30,
+    height : '100%',
+    alignSelf: 'center',
   },
 
   

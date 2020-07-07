@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground ,TouchableOpacity, ListView,FlatList, Platform} from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground ,TouchableOpacity, ListView,FlatList, Platform, Dimensions} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Icon } from 'native-base';
 import { TouchableHighlight } from 'react-native-gesture-handler';
@@ -36,20 +36,18 @@ export default class HasilSurvei extends Component {
     render(){
         return (
           <View style={styles.container}>
-              <View>
+              <View style={{}}>
                   <Text style={{
                       fontFamily: 'sans-serif-medium',
                       color: 'white',
                       fontSize: 40,
                       position: 'relative',
-                      top : 70,
-                      right: 80, 
-                      marginBottom: 20,
+                      top : '10%',
+                      right: '2%',
+                      marginBottom: '20%',
+                      marginTop: '15%', 
                   }}>Hasil Survei</Text>
-              </View>
-              <View style={{
-                top:60,
-                }}>
+              <View>
                   { this.state.avail ? null : <CustomFlat/>}
                   {this.state.avail &&
                     <FlatList
@@ -59,10 +57,7 @@ export default class HasilSurvei extends Component {
                       <View style={{
                         width : 250,
                         height: 150,
-                        borderTopLeftRadius : 20,
-                        borderTopRightRadius : 20,
-                        borderBottomLeftRadius: 20,
-                        borderBottomRightRadius: 20,
+                        borderRadius: 20,
                         position: 'relative',
                         backgroundColor: '#E2FFF9',
                         margin: 10,
@@ -86,11 +81,14 @@ export default class HasilSurvei extends Component {
                                   }}>{item.nama}</Text>
                             </View>
                         </TouchableOpacity>
-                        </View>
-                    )} 
+                        
+                          </View>
+                    )}
                     />
                     }
                   </View>
+                  
+          </View>
               </View>
           
         );
@@ -118,23 +116,13 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-    box: {
-        backgroundColor: '#E2FFF9',
-        borderTopLeftRadius: 40,
-        borderTopRightRadius: 40,
-        width: 410,
-        height: 654,
-        position: 'relative',
-        top: 108,
-    },
-    button:{
-      width: 237,
-      height: 40,
+    buton:{
+      width: 200,
+      height: 50,
       borderRadius: 30,
-      alignItems: 'center',
-      alignSelf: 'center',
-      backgroundColor: '#1BBC9B',
-      position: 'absolute',
-      top: 560,
+      alignContent: 'center',
+      backgroundColor: 'white',
+      position: 'relative',
+      bottom: '10%',
     },
 });
