@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image, ImageBackground ,TouchableOpacity,} from
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Icon } from 'native-base';
 import { render } from 'react-dom';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 export default class Buahk extends Component {
@@ -71,8 +72,17 @@ export default class Buahk extends Component {
         }}>{this.state.latin}</Text>
         </View>
       <View style={styles.isiK}>
-        <Text style={{fontSize: 25, paddingHorizontal: '3%', textAlign: 'justify', paddingTop: '10%'}}>{this.state.keterangan}</Text>
-          
+        <SafeAreaView style={{
+          height: '103%',
+          bottom: 21,
+          borderRadius: 30,
+          width: '100%',
+        }}>
+        <ScrollView 
+        showsVerticalScrollIndicator={false}>
+        <Text style={{fontSize: 23, paddingHorizontal: '3%', textAlign: 'justify', paddingTop: '2%'}}>{this.state.keterangan}</Text>
+        </ScrollView>
+        </SafeAreaView>
     </View><View style={{
               width: '30%',
               height: '30%',

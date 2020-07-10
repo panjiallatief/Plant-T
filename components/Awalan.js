@@ -43,7 +43,7 @@ export default class Awalan extends Component{
             <TouchableOpacity
             onPress={() => this.props.navigation.navigate('Home')}>
           <Text style={{
-            paddingVertical: 11,
+            paddingVertical: '5%',
             fontSize: 25,
             color: "#1BBC9B",
             alignSelf: 'center'
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: 'white',
     position: 'relative',
-    bottom: 80,
+    bottom: '10%',
   },
   backgroundimage: {
     flex: 1,

@@ -12,7 +12,9 @@ export default class Awalan extends Component{
           avail:true,
           ph:"",
           suhu:"",
-          musim:""
+          musim:"",
+          tinggi:"",
+          curah:"",
         }
       }
       componentDidMount(){
@@ -30,6 +32,7 @@ export default class Awalan extends Component{
               opsi_a:json.opsi_a,
               opsi_b:json.opsi_b,
               opsi_c:json.opsi_c,
+              ket_p:json.ket_p,
               tipe: 2
           });
         })
@@ -38,8 +41,8 @@ export default class Awalan extends Component{
         });
       }
       _jawab(opsi){
-        if(this.state.tipe>3){
-            this.props.navigation.navigate('Hasil',{ph:this.state.ph,suhu:this.state.suhu,musim:opsi})
+        if(this.state.tipe>5){
+            this.props.navigation.navigate('Hasil',{ph:this.state.ph,suhu:this.state.suhu,tinggi:this.state.tinggi,curah:opsi,musim:opsi})
         }else{
             if(this.state.tipe==2){
                 this.setState({
@@ -69,6 +72,7 @@ export default class Awalan extends Component{
                 opsi_a:json.opsi_a,
                 opsi_b:json.opsi_b,
                 opsi_c:json.opsi_c,
+                ket_p:json.ket_p,
                 
             });
             if(json.opsi_c==""){
@@ -91,8 +95,10 @@ export default class Awalan extends Component{
                 height: 250,
                 alignSelf: 'center',
                 marginVertical: 10,
+                bottom: '15%',
             }}>
             <Text style={styles.tanyatext}>{this.state.pertanyaan}</Text> 
+            <Text style={styles.ketText}>{this.state.ket_p}</Text>
             </SafeAreaView>
             <TouchableOpacity
                         onPress={this._jawab.bind(this,this.state.opsi_a)}>       
@@ -101,7 +107,7 @@ export default class Awalan extends Component{
                         textAlign: 'center',
                         fontSize: 25,
                         color: "#1BBC9B",
-                        alignSelf: 'center'
+                        alignSelf: 'center',
                     }}>{this.state.opsi_a}</Text>
                     </View>
                     </TouchableOpacity>
@@ -153,7 +159,12 @@ const styles = StyleSheet.create({
   tanyatext: {
       textAlign: 'center',
       fontSize: 30,
-      paddingVertical: 60,
+      paddingVertical: '50%',
+  },
+  ketText: {
+    fontSize: 15,
+    top: '65%',
+    paddingHorizontal: '10%'
   },
   buton:{
     width: 200,
