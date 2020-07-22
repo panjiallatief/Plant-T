@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Plant-T",
+    "name": "Plan-T",
     "slug": "byPanji",
     "platforms": [
       "ios",
@@ -16,7 +16,7 @@
       "backgroundColor": "#ffffff"
     },
     "android": {
-      "package": "com.byPanji.plantT",
+      "package": "com.byPanji.planT",
       "versionCode": 1
     },
     "updates": {
