@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground ,TouchableOpacity,} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Icon } from 'native-base';
-import { render } from 'react-dom';
 import { ScrollView } from 'react-native-gesture-handler';
 
 

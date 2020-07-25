@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground ,TouchableOpacity, ListView,FlatList, Platform, Dimensions} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Icon } from 'native-base';
 import { TouchableHighlight } from 'react-native-gesture-handler';
 
 export default class HasilSurvei extends Component {
@@ -10,11 +9,16 @@ export default class HasilSurvei extends Component {
         this.state ={
           ph:this.props.navigation.state.params.ph,
           suhu:this.props.navigation.state.params.suhu,
-          musim:this.props.navigation.state.params.musim
+          musim:this.props.navigation.state.params.musim,
+          tinggi:this.props.navigation.state.params.tinggi,
+          curah:this.props.navigation.state.params.curah,
+          ubuah:this.props.navigation.state.params.ubuah,
+          batang:this.props.navigation.state.params.batang,
+          matang:this.props.navigation.state.params.matang,
         }
       }
       componentDidMount(){
-        return fetch('https://spkbuah.patunganbersama.com/api/hasil?ph='+this.state.ph+'&suhu='+this.state.suhu+'&musim='+this.state.musim,{
+        return fetch('https://spkbuah.patunganbersama.com/api/hasil?ph='+this.state.ph+'&suhu='+this.state.suhu+'&tinggi='+this.state.tinggi+'&batang='+this.state.batang+'&ubuah='+this.state.ubuah+'&matang='+this.state.matang+'&curah='+this.state.curah+'&musim='+this.state.musim,{
           method: 'GET',
           headers: {
             Accept: 'application/json',

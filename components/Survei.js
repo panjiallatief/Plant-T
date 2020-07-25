@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground ,TouchableOpacity,} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Icon } from 'native-base';
 
 
 export default class Awalan extends Component{
@@ -15,6 +14,9 @@ export default class Awalan extends Component{
           musim:"",
           tinggi:"",
           curah:"",
+          ubuah:"",
+          batang:"",
+          matang:"",
         }
       }
       componentDidMount(){
@@ -41,8 +43,8 @@ export default class Awalan extends Component{
         });
       }
       _jawab(opsi){
-        if(this.state.tipe>5){
-            this.props.navigation.navigate('Hasil',{ph:this.state.ph,suhu:this.state.suhu,tinggi:this.state.tinggi,curah:opsi,musim:opsi})
+        if(this.state.tipe>8){
+            this.props.navigation.navigate('Hasil',{ph:this.state.ph,suhu:this.state.suhu,tinggi:this.state.tinggi,batang:this.state.batang,ubuah:this.state.ubuah,matang:this.state.matang,curah:opsi,musim:opsi})
         }else{
             if(this.state.tipe==2){
                 this.setState({
@@ -52,7 +54,19 @@ export default class Awalan extends Component{
                 this.setState({
                     suhu:opsi
                 });
-            }
+            }else if(this.state.tipe==4){
+              this.setState({
+                  tinggi:opsi
+              });
+          }else if(this.state.tipe==5){
+            this.setState({
+                batang:opsi
+            });
+        }else if(this.state.tipe==6){
+          this.setState({
+              suhu:opsi
+          });
+      }
             console.log(this.state.tipe)
             this.setState({
                 tipe: this.state.tipe+1
@@ -164,7 +178,7 @@ const styles = StyleSheet.create({
   ketText: {
     fontSize: 15,
     top: '65%',
-    paddingHorizontal: '10%'
+    paddingHorizontal: '15%'
   },
   buton:{
     width: 200,
