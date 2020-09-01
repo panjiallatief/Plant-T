@@ -43,8 +43,9 @@ export default class Awalan extends Component{
         });
       }
       _jawab(opsi){
-        if(this.state.tipe>8){
-            this.props.navigation.navigate('Hasil',{ph:this.state.ph,suhu:this.state.suhu,tinggi:this.state.tinggi,batang:this.state.batang,ubuah:this.state.ubuah,matang:this.state.matang,curah:opsi,musim:opsi})
+        if(this.state.tipe>=9){
+            console.log("masih disini")
+            this.props.navigation.navigate('Hasil',{ph:this.state.ph,suhu:this.state.suhu,tinggi:this.state.tinggi,batang:this.state.batang,ubuah:this.state.ubuah,matang:this.state.matang,curah:this.state.curah,musim:opsi})
         }else{
             if(this.state.tipe==2){
                 this.setState({
@@ -54,19 +55,32 @@ export default class Awalan extends Component{
                 this.setState({
                     suhu:opsi
                 });
-            }else if(this.state.tipe==4){
+            }
+            else if(this.state.tipe==4){
               this.setState({
                   tinggi:opsi
               });
-          }else if(this.state.tipe==5){
+          }
+          else if(this.state.tipe==5){
             this.setState({
                 batang:opsi
             });
-        }else if(this.state.tipe==6){
+        }
+        else if(this.state.tipe==6){
           this.setState({
-              suhu:opsi
+              ubuah:opsi
           });
       }
+      else if(this.state.tipe==7){
+        this.setState({
+            matang:opsi
+        });
+    }
+    else if(this.state.tipe==8){
+      this.setState({
+          curah:opsi
+      });
+  }
             console.log(this.state.tipe)
             this.setState({
                 tipe: this.state.tipe+1

@@ -18,6 +18,7 @@ export default class HasilSurvei extends Component {
         }
       }
       componentDidMount(){
+        //console.log('https://spkbuah.patunganbersama.com/api/hasil?ph='+this.state.ph+'&suhu='+this.state.suhu+'&tinggi='+this.state.tinggi+'&batang='+this.state.batang+'&ubuah='+this.state.ubuah+'&matang='+this.state.matang+'&curah='+this.state.curah+'&musim='+this.state.musim)
         return fetch('https://spkbuah.patunganbersama.com/api/hasil?ph='+this.state.ph+'&suhu='+this.state.suhu+'&tinggi='+this.state.tinggi+'&batang='+this.state.batang+'&ubuah='+this.state.ubuah+'&matang='+this.state.matang+'&curah='+this.state.curah+'&musim='+this.state.musim,{
           method: 'GET',
           headers: {
@@ -61,7 +62,7 @@ export default class HasilSurvei extends Component {
                     <FlatList
                     showsVerticalScrollIndicator={false}
                     data = {this.state.data}
-                    renderItem = {({item, index, separators}) => (
+                    renderItem = {({item, index}) => (
                       <View style={{
                         width : 320,
                         height: 200,
@@ -111,10 +112,10 @@ export default class HasilSurvei extends Component {
 };
 const CustomFlat = () =>(  
     <FlatList
-    data = {[{key: 'item1'}]}
-    renderItem = {({item, index, separators}) => (
+    data = {[{id: 1}]}
+    renderItem = {({item, index}) => (
         <TouchableHighlight
-        key={item.key}>
+        key={item.id}>
     <View style={{
       width: Dimensions.get('screen').width,
       height: Dimensions.get('screen').height,
