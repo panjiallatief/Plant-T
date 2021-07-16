@@ -7,6 +7,9 @@ import Beranda from './Beranda';
 import Buah from './Buah';
 import HasilSurvei from './HasilSurvei';
 import Survei from './Survei';
+import PilihTanaman from './PilihTanaman';
+import InfoMediaTanam from './InfoMediaTanam';
+import Pilihsurvei from './Pilihsurvei';
 
 
 const HomePage = createStackNavigator({
@@ -24,6 +27,15 @@ const HomePage = createStackNavigator({
     },
     'SPK' : {
         screen : Survei
+    },
+    'Pilih' : {
+        screen : PilihTanaman
+    },
+    'Info' : {
+        screen : InfoMediaTanam
+    },
+    'PilihS' : {
+        screen : Pilihsurvei
     }
 },{
     headerMode: 'none',

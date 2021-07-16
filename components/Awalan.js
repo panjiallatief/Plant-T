@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground ,TouchableOpacity,} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { StyleSheet, Text, View, Image, ImageBackground ,TouchableOpacity,SafeAreaView} from 'react-native';
 import { Icon } from 'native-base';
 
 

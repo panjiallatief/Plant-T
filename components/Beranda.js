@@ -323,7 +323,7 @@ export default class Beranda extends Component {
             </ScrollView>
             <View>
               
-                <TouchableOpacity  onPress={() => this.props.navigation.navigate('SPK',{id:1})}>
+                <TouchableOpacity  onPress={() => this.props.navigation.navigate('PilihS',{id:1})}>
                 <SafeAreaView style={{
                 height: 60,
                 width: 280,
